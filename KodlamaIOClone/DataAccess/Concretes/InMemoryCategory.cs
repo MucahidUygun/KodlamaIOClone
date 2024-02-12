@@ -18,19 +18,19 @@ namespace KodlamaIOClone.DataAccess.Concretes
                 new Category 
                 { 
                     Id=1,
-                    Name = "Programlama",
-                });
-            categories.Add(
-                new Category
-                {
-                    Id = 2,
                     Name = "Programlama 1",
                 });
             categories.Add(
                 new Category
                 {
-                    Id = 3,
+                    Id = 2,
                     Name = "Programlama 2",
+                });
+            categories.Add(
+                new Category
+                {
+                    Id = 3,
+                    Name = "Programlama 3",
                 });
         }
 
