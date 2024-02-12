@@ -34,14 +34,18 @@ namespace KodlamaIOClone.DataAccess.Concretes
             return courses;
         }
 
-        public Category GetById(int id)
+        public Course GetById(int id)
         {
-            throw new NotImplementedException();
+            return courses.Where(c => c.Id == id).FirstOrDefault();
+
         }
 
         public void Update(Course course)
         {
-            throw new NotImplementedException();
+            Course courseToUpdate = GetById(course.Id);
+            courseToUpdate.Title = course.Title;
+
         }
+   
     }
 }

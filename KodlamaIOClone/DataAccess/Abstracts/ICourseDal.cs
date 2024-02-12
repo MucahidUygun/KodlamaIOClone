@@ -10,7 +10,7 @@ namespace KodlamaIOClone.DataAccess.Abstracts
     public interface ICourseDal
     {
         void Add(Course courses);
-        Category GetById(int id);
+        Course GetById(int id);
         List<Course> GetAll();
         void Update(Course courses);
         void Delete(Course courses);
