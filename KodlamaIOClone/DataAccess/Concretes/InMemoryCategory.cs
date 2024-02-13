@@ -18,7 +18,7 @@ namespace KodlamaIOClone.DataAccess.Concretes
                 new Category 
                 { 
                     Id=1,
-                    Name = "Programlama 1",
+                    Name = "Programlama 11",
                 });
             categories.Add(
                 new Category

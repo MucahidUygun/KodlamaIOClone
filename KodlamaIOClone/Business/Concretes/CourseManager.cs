@@ -23,6 +23,10 @@ namespace KodlamaIOClone.Business.Concretes
         {
            Random rnd = new Random();
             Course dtoToCourse = new Course();
+            dtoToCourse.Title = dtoToCourse.Title;
+            dtoToCourse.Description = dtoToCourse.Description;
+            dtoToCourse.ImageUrl = dtoToCourse.ImageUrl;
+            dtoToCourse.Price = dtoToCourse.Price;
             dtoToCourse.Id = (int)rnd.NextInt64(0, 100);
             _courseDal.Add(dtoToCourse);
         }
@@ -34,7 +38,7 @@ namespace KodlamaIOClone.Business.Concretes
             _courseDal.Delete(deleteForCourse);
         }
 
-        public List<GetAllCourseResponse> getAllCourse()
+        public List<GetAllCourseResponse> GetAllCourse()
         {
             List<GetAllCourseResponse> courselist = new List<GetAllCourseResponse>();
             foreach (var item in _courseDal.GetAll())
@@ -44,13 +48,13 @@ namespace KodlamaIOClone.Business.Concretes
             return courselist;
         }
 
-        public GetByIdCourseResponse getByIdCourse(int id)
+        public GetByIdCourseResponse GetByIdCourse(int id)
         {
-            GetByIdCourseResponse getallCourseResponse= new GetByIdCourseResponse();
+            GetByIdCourseResponse GetAllCourseResponse= new GetByIdCourseResponse();
             Course course = _courseDal.GetById(id);
-            getallCourseResponse.Id = course.Id;
-            getallCourseResponse.Title = course.Title;
-            return getallCourseResponse;
+            GetAllCourseResponse.Id = course.Id;
+            GetAllCourseResponse.Title = course.Title;
+            return GetAllCourseResponse;
         }
 
         public void Update(UpdateCourseRequest course)
