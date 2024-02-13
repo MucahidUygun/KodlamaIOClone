@@ -44,7 +44,21 @@ namespace KodlamaIOClone.Business.Concretes
             return tutorlist;
         }
 
+        public List<GetAllTutorResponse> getAllTutor()
+        {
+            throw new NotImplementedException();
+        }
+
         public GetByIdTutorResponse GetByIdTutor(int id)
+        {
+            GetByIdTutorResponse getallTutorResponse = new GetByIdTutorResponse();
+            Tutor tutor = _tutorDal.GetById(id);
+            getallTutorResponse.Id = tutor.Id;
+            getallTutorResponse.FullName = tutor.FullName;
+            return getallTutorResponse;
+        }
+
+        public GetByIdTutorResponse getByIdTutor(int id)
         {
             GetByIdTutorResponse getallTutorResponse = new GetByIdTutorResponse();
             Tutor tutor = _tutorDal.GetById(id);
